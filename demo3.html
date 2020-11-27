@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+<button>click</button>
+<button>click</button>
+<button>click</button>
+<button>click</button>
+<button>click</button>
+<script>
+    $(function (){
+        //1.隐式迭代 给所有按钮都绑定了点击事件
+        $("button").click(function (){
+            // 2.当前的元素变化背景颜色
+            $(this).css('background','pink');
+            // 3.其余兄弟去掉背景颜色
+            $(this).siblings("button").css("background","")
+
+        })
+    })
+</script>
+</body>
+</html>
